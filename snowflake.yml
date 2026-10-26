@@ -1,0 +1,44 @@
+# created-by: streamlit-in-workspaces; skill-version=1.0.0
+definition_version: 2
+entities:
+  streamlit_app:
+    type: streamlit
+    identifier:
+      database: SNOWFLAKE_LEARNING_DB
+      schema: PRITIX.M.SHARMA@INTEL.COM_SEMANTIC_MODEL
+      name: PDH_COMMAND_CENTER
+    title: pdh-engineering-studio
+    query_warehouse: IF_WH_SCHAIN_IFPDH_CONSUMPTION
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    run_mode: SpcsOnly
+    execute_as: OWNER
+    main_file: streamlit_app.py
+    artifact_repositories:
+      - SNOWFLAKE.SNOWPARK.PYPI_SHARED_REPOSITORY
+    artifacts:
+      - pyproject.toml
+      - streamlit_app.py
+      - .streamlit/config.toml
+      - utils/config.py
+      - utils/discovery.py
+      - utils/module_config.py
+      - utils/lineage_parser.py
+      - utils/impact_analyzer.py
+      - utils/ai_helpers.py
+      - utils/codegen_pipeline.py
+      - utils/rule_repo_health.py
+      - app_pages/home.py
+      - app_pages/code_generator.py
+      - app_pages/impact_simulator.py
+      - app_pages/item_tracer.py
+      - app_pages/tdd_generator.py
+      - app_pages/unit_test_generator.py
+      - app_pages/object_flow.py
+      - app_pages/cortex_analyst.py
+      - app_pages/compliance_analyzer.py
+      - app_pages/drift_monitor.py
+      - app_pages/dev_tracker.py
+      - app_pages/code_reviewer.py
+    sharing:
+      - role: ROLE_IF_CDA_PDH_SUPPLY_PLANNING_ANALYSIS_CONTRIBUTOR
+        with_grant_option: true
